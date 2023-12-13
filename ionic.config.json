@@ -1,0 +1,7 @@
+{
+  "name": "registrapp9",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
