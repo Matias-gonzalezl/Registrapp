@@ -1,20 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+<ion-app class="mi-clase-de-color container" fullscreen class="camera-container">
+  <!-- Header page start-->
+  <ion-header collapse="fade" >
+    <ion-toolbar  color = "tertiary">
+      <div class="centered-button" color = "tertiary">
+        <ion-button (click)="goToApiPage()" color = "tertiary">
+          <ion-icon name="play-circle-outline" class="Dim_logo_close"></ion-icon>
+        </ion-button>
+      </div>
+      <!-- Button cerra sesion start-->
+      <ion-buttons [collapse]="true" slot="end">
+        <ion-button (click)="goToLoginPage()"> <ion-icon name="exit-sharp" class="Dim_logo_close"></ion-icon> </ion-button>
+      </ion-buttons>
+      <!-- Button cerra sesion End-->
     </ion-toolbar>
   </ion-header>
+  <!-- Header page end-->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <!-- card start-->
+  <ion-card *ngIf="!isScanning" class="Card_logueo">
+    <ion-card-content class="fade-in">
+      <div class="image-container">
+        <img class="full-width-image" src="/assets/registrAPP.PNG" alt="RegistrAPP">
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <!--  card end -->
+
+  <ion-card *ngIf="!isScanning" color="tertiary" class="card_usuario fade-in ">
+    <div class="card-content">
+      <ion-card-header>
+        <ion-card-title style="text-align: left; ">Bienvenido {{email}} </ion-card-title>
+        <ion-card-subtitle>Analista Programador</ion-card-subtitle>
+      </ion-card-header>
+    </div>
+  </ion-card>
+
+  <ion-button *ngIf="!isScanning" color="danger" class="boton_qr" (click)="openCam()">
+    <ion-icon class="icono_qr" name="qr-code-sharp"></ion-icon>
+  </ion-button>
+
+  <ion-button *ngIf="isScanning" color="light" class="boton_cerrar_camara" (click)="closeCam()">
+    Cerrar Cámara
+  </ion-button>
+
+  <!-- Footer page start-->
+  <ion-footer>
+    <ion-toolbar color="tertiary">
+      <ion-title class="center-title">RegistrAPP 2023® </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  <!--Footer page end -->
+</ion-app>

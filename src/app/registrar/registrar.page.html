@@ -1,0 +1,43 @@
+<ion-app class="mi-clase-de-color">
+    <!-- Header page start-->
+    <ion-header collapse="fade" >
+      <ion-toolbar  color = "tertiary">
+        <!-- Button cerra sesion start-->
+        <ion-buttons [collapse]="true" slot="end">
+          <ion-button (click)="goToLoginPage()"> <ion-icon name="exit-sharp" class="Dim_logo_close"></ion-icon> </ion-button>
+        </ion-buttons>
+        <!-- Button cerra sesion End-->
+      </ion-toolbar>
+    </ion-header>
+    <!-- Header page end-->
+    
+    <!-- card  start-->     
+        
+    
+    
+    <ion-card class="Card_login2 custom-card">
+      <h1>Retablecer contraseña</h1>
+      <p>Introduce tu correo electrónico</p>
+      <ion-card-content class="center-content">      
+        <form>
+          <ion-input [(ngModel)]="email"  name="email" label="Correo electrónico " label-placement="floating" fill="solid" placeholder="Ingrese su correo"></ion-input>
+          <br />
+          <ion-button color="tertiary" expand="full" type="submit" (click)="resetPassword()">Restablecer</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+    
+      
+    <!-- card end -->
+
+
+
+    <!-- Footer page start-->
+<ion-footer>
+    <ion-toolbar color = "tertiary">
+      <ion-title class="center-title">RegistrAPP 2023® </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  <!--Footer page end -->
+
+</ion-app>

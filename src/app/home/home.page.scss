@@ -1,27 +1,140 @@
-#container {
-  text-align: center;
-
+.ion-content-scroll-host {
   position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.Dim_logo_close {
+  width: 30px;
+  height: 30px ;
+}
+
+.Card_logueo {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.card_usuario {
+  width:350px ;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  
+
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 7rem; /* Ajusta el tamaño del icono según sea necesario */
+  flex: 1; /* Hace que el icono ocupe casi todo el alto disponible */
+  padding: 1rem; /* Añade espaciado alrededor del icono si es necesario */
+}
+
+.logo_usuario {
+  width: 150px ;
+  height: 150px ;
+  margin-left: 80px ;
+  
+}
+
+.fade-in {
+  opacity: 0; /* Inicialmente, el contenido estará invisible */
+  animation: fadeIn 5s ease-in-out forwards; /* Aplicar la animación */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Comienza completamente transparente */
+  }
+  100% {
+    opacity: 1; /* Termina completamente visible */
+  }
+}
+
+
+.mi-clase-de-color {
+  background-color:rgba(243, 237, 237, 0.993);
+  display: flex;
+}
+
+
+
+
+
+
+.center-title {
+  text-align: center;
+  width: 100%;
+}
+
+.boton_qr {
+  
+  width: 100px ;
+  height:100px ;
+  margin: 0 auto;
+}
+
+.center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.icono_qr {
+  width: 100px ;
+  height:100px ;
+
+}
+
+.full-width-image {
+  max-width: 100%; /* La imagen se ajustará al ancho de la tarjeta */
+}
+
+.image-container {
+  margin-bottom: 140px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Establece el espacio de separación vertical deseado */
+}
+
+.centered-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+
+ion-card {
+  --background: transparent;
+}
+
+.camera-container {
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+.boton_cerrar_camara {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; /* Ajusta según sea necesario para evitar superposiciones con otros elementos */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}

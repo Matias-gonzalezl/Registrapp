@@ -1,0 +1,80 @@
+.ion-content-scroll-host {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .Dim_logo_close {
+    width: 30px;
+    height: 30px ;
+  }
+  
+  .Card_logueo {
+    display: flex;
+    width: 350px;
+    height: 250px ;
+    margin-left: 50px ;
+  
+    border-style:solid;
+    border-width: 4 px;
+    border-color: red;
+  }
+
+  .Card_login {
+    display: flex;
+    width: 350px;
+    height: 500px ;
+    margin-left: 50px ;
+  
+    border-style:solid;
+    border-width: 4 px;
+    border-color: red;
+  }
+
+  .input_login {
+    margin-top: 40px;
+    width: 300px ;
+    margin-right: 50px ;
+  }
+
+  
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+     /* Asegurarse de que ocupe toda la altura disponible */
+  }
+   
+  .logo_login {
+    width: 200px ;
+    height: 200px;
+    margin-left: 20px;
+  }
+
+  
+  .center-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .mi-clase-de-color {
+    background-color:rgba(243, 237, 237, 0.993);
+  }
+
+
+  .custom-card {
+    text-align: center; /* Para centrar el texto */
+  }
+  
+  .custom-card h1 {
+    color: black; /* Para cambiar el color del título a negro */
+  }
+  
+  .custom-card p {
+    color: black; /* Para cambiar el color del párrafo a negro */
+  }

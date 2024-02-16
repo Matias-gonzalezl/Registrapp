@@ -1,0 +1,20 @@
+.mi-clase-de-color {
+    background-color:rgba(243, 237, 237, 0.993);
+    display: flex;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Establece el espacio de separación vertical deseado */
+  }
+   
+  .Dim_logo_close {
+    width: 30px;
+    height: 30px ;
+  }
+
+  .center-title {
+    text-align: center;
+    width: 100%;
+  }

@@ -1,0 +1,93 @@
+<ion-app class="mi-clase-de-color container">
+  <!-- Header page start-->
+  <ion-header collapse="fade" >
+    <ion-toolbar  color = "tertiary">
+  <!-- Button cerra sesion start-->
+      <ion-buttons [collapse]="true" slot="end">
+        <ion-button (click)="goToLoginPage()"> <ion-icon name="exit-sharp" class="Dim_logo_close"></ion-icon> </ion-button>
+      </ion-buttons>
+      <!-- Button cerrregia sesion End-->
+      
+    </ion-toolbar>
+  </ion-header>
+  <!-- Header page end-->
+
+
+ <!-- card  start-->        
+ <ion-card class="Card_login2 custom-card">
+  <h1>Registro de Usuario</h1>
+<ion-card-content class="center-content">      
+    
+   
+  <!-- form start-->
+  <form [formGroup]="createUser"  (ngSubmit)="onSubmit()"  >
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input placeholder="Ingrese su correo electrónico" name="user" formControlName="email"></ion-input>
+    </ion-item>
+    <div *ngIf="createUser.get('email').touched && createUser.get('email').invalid">
+      <ion-text *ngIf="errorControl.email?.errors?.required">
+        Se requiere su correo electrónico
+      </ion-text>
+      <ion-text *ngIf="errorControl.email?.errors?.pattern">
+        El formato del  correo electrónico no es válido
+      </ion-text>
+    </div>
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password" name="pw"></ion-input>
+    </ion-item>
+    <div *ngIf="createUser.get('password').touched && createUser.get('password').invalid">
+      <ion-text *ngIf="errorControl.password?.errors?.required">
+        Se requiere una contraseña
+      </ion-text>
+      <ion-text *ngIf="errorControl.password?.errors?.pattern">
+        La contraseña debe contener al menos 8 caracteres y máximo 12 caracteres.
+         
+      </ion-text>
+    </div>
+
+
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" placeholder="Confirme su contraseña" formControlName="confirmPassword"></ion-input>
+    </ion-item>
+    <div *ngIf="createUser.get('confirmPassword').touched && createUser.get('confirmPassword').invalid">
+      <ion-text *ngIf="errorControl.confirmPassword?.errors?.required">
+        Se requiere confirmar la contraseña
+      </ion-text>
+      <ion-text *ngIf="errorControl.confirmPassword?.errors?.passwordMismatch">
+        Las contraseñas no coinciden
+      </ion-text>
+    </div>
+
+    
+    <ion-button   color="tertiary" expand="full" type="submit"  (click)="onSubmit()"r  >Registrarse</ion-button>
+   
+
+
+  </form>
+    <!-- form end-->
+  
+ 
+ 
+  </ion-card-content>
+</ion-card>
+  <!-- card end -->
+
+
+
+
+
+  <!-- Footer page start-->
+  <ion-footer>
+    <ion-toolbar color="tertiary">
+      <ion-title class="center-title">RegistrAPP 2023® </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  <!--Footer page end -->
+
+</ion-app>

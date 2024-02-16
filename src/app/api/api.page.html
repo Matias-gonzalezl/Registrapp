@@ -1,0 +1,35 @@
+<ion-app class="mi-clase-de-color container">
+  <!-- Header page start-->
+  <ion-header collapse="fade" >
+    <ion-toolbar  color = "tertiary">
+     
+      <!-- Button cerra sesion start-->
+      <ion-buttons [collapse]="true" slot="end">
+        <ion-button (click)="goToHomePage()"> <ion-icon name="exit-sharp" class="Dim_logo_close"></ion-icon> </ion-button>
+      </ion-buttons>
+      <!-- Button cerra sesion End-->
+      
+    </ion-toolbar>
+  </ion-header>
+  <!-- Header page end-->
+  
+  
+  <ion-content [fullscreen]="true">
+    <ion-list>
+      <ion-item *ngFor="let item of getdata">
+        {{item.alpha_two_code}}
+        {{item.web_pages}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+
+   <!-- Footer page start-->
+   <ion-footer>
+    <ion-toolbar color="tertiary">
+      <ion-title class="center-title">RegistrAPP 2023® </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  <!--Footer page end -->
+
+</ion-app>

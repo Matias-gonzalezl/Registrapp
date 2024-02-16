@@ -1,0 +1,67 @@
+<ion-app class="mi-clase-de-color">
+  <!-- Header page start-->
+  <ion-header collapse="fade">
+    <ion-toolbar color="tertiary">
+    </ion-toolbar>
+  </ion-header>
+  <!-- Header page end-->
+
+  <!-- card start-->
+
+  <ion-card class="Card_login2">
+    <div class="logo-container">
+      <img src="/assets/registrAPP.PNG" alt="RegistrAPP">
+    </div>
+    <ion-card-content class="center-content">
+      
+      <form [formGroup]="loginForm">
+
+        <ion-item class="input-field">
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input placeholder="Ingrese su correo electrónico" name="user" formControlName="email"></ion-input>
+        </ion-item>
+        <div *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid">
+          <ion-text *ngIf="errorControl.email?.errors?.required">
+            Se requiere su correo electrónico
+          </ion-text>
+          <ion-text *ngIf="errorControl.email?.errors?.pattern">
+            El formato del  correo electrónico no es válido
+          </ion-text>
+        </div>
+
+        <ion-item class="input-field">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password" name="pw"></ion-input>
+        </ion-item>
+        <div *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
+          <ion-text *ngIf="errorControl.password?.errors?.required">
+            Se requiere una contraseña
+          </ion-text>
+          <ion-text *ngIf="errorControl.password?.errors?.pattern">
+            La contraseña debe contener al menos 8 caracteres
+             
+          </ion-text>
+        </div>
+
+        <ion-button color="tertiary" expand="full" type="submit" (click)="login()">INGRESAR</ion-button>
+        <a href="/registrar" class="sin-subrayado">¿Olvidaste tu contraseña?</a>
+        <br>
+        <a href="/resgistro-usuario" class="sin-subrayado">¿No tienes cuenta ?</a>
+
+
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- card end -->
+
+  <!-- Footer page start-->
+  <ion-footer>
+    <ion-toolbar color="tertiary">
+      <ion-title class="center-title">RegistrAPP 2023®</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  <!--Footer page end -->
+
+</ion-app>
